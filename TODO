@@ -1,0 +1,7 @@
+Some thoughts for further development:
+--------------------------------------
+
+- Local development without Docker
+- Update .NET Core version (v1.1?)
+- Travis CI support
+- Linux support/verification

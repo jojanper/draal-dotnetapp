@@ -1,0 +1,20 @@
+{
+  "name": "draal-dotnetapp",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jojanper/draal-dotnetapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jojanper/draal-dotnetapp/issues"
+  },
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "dotnet restore",
+    "build": "dotnet build",
+    "docker-build": "docker-compose build",
+    "docker-run": "docker-compose up",
+    "docker-rund": "docker-compose up -d",
+    "docker-down": "docker-compose down"
+  }
+}

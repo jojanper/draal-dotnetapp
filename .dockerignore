@@ -1,0 +1,10 @@
+.vscode
+bin/
+node_modules/
+pgdata/
+obj/
+.dockerignore
+.git*
+docker-compose.yml
+Dockerfile
+TODO

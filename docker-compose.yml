@@ -1,0 +1,32 @@
+version: "2"
+services:
+  draal-dotnetapp:
+    container_name: draal-dotnetapp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+      - /app/obj
+    links:
+      - dotnet-pg-db:postgres
+    depends_on:
+      - "dotnet-pg-db"
+  dotnet-pg-db:
+    image: postgres
+    container_name: dotnet-pg-db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=supersecret
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg-db-name:/var/lib/postgresql/data
+volumes:
+  pg-db-name:
+    #external: true
+    driver_opts:
+      device: ${PWD}/pgdata
+      o: bind
