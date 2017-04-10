@@ -26,7 +26,6 @@ services:
       - pg-db-name:/var/lib/postgresql/data
 volumes:
   pg-db-name:
-    #external: true
     driver_opts:
       device: ${PWD}/pgdata
       o: bind
